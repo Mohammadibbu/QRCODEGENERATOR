@@ -69,8 +69,8 @@ document.getElementById("footer").innerHTML = `
 document.getElementById("headerpage").innerHTML = `   <img
 src="../images/icon.png"
 alt="qr"
-width="20"
-height="20"
+width="35"
+height="35"
 style="display: flex; flex-direction: flex-start"
 /><label
 style="
@@ -108,3 +108,17 @@ function confirmation(id) {
   }
 }
 //--------------------------------------------------
+window.onscroll = function () {
+  myFunction();
+};
+
+var navbar = document.getElementById("headerpage");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
