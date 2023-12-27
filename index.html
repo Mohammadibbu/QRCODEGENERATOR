@@ -17,8 +17,27 @@
     <!-- -->
   </head>
   <body>
-    <div class="headerpage" id="headerpage"></div>
+    <div id="headerpage" class="headerpage">
+      <img
+        src="images/icon.png"
+        alt="qr"
+        width="35"
+        height="35"
+        style="display: flex; flex-direction: flex-start"
+      /><label
+        style="
+          color: darkblue;
+          font-weight: bolder;
+          border-radius: 50px;
+          padding-inline: 30px;
+        "
+        >QR CODE GENERATOR</label
+      >
+      <a href="#">HOME</a>
+      <a href="https://en.wikipedia.org/wiki/QR_code" target="_blank">About</a>
 
+      <a onclick="confirmation(this)">Contact Us</a>
+    </div>
     <center>
       <div class="button">
         <button

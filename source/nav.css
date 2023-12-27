@@ -42,7 +42,7 @@ body {
 #headerpage a {
   float: left;
   display: block;
-  color: #413636;
+  color: #070707;
   text-align: center;
   padding: 4px 6px;
   text-decoration: none;
@@ -61,9 +61,9 @@ body {
   color: white;
 }
 
-.content {
+/* .content {
   padding: 16px;
-}
+} */
 
 .sticky {
   position: fixed;
@@ -71,8 +71,6 @@ body {
   width: 100%;
 }
 
-.headerpage:hover {
-}
 a {
   text-transform: uppercase;
   color: #000000;
