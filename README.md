@@ -1,1 +1,2 @@
-https://mohammadibbu008.github.io/QRCodeGenerator/
+
+https://mohammadibbu.github.io/QRCodeGenerator/
