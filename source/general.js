@@ -82,9 +82,9 @@ style="
 >QR CODE GENERATOR</label
 >
 <a href="../index.html">HOME</a>
-<a href="https://en.wikipedia.org/wiki/QR_code" target="_blank">About</a>
+<a onclick="confirmation(this,'Open with New Tab..','https://en.wikipedia.org/wiki/QR_code','_blank');" >About</a>
 
-<a onclick="confirmation(this)">Contact Us</a>`;
+<a onclick="confirmation(this,'Opening Gmail or Email','mailto:mohammadibbu008@gmail.com?subject=QR_code generator!&body=This project is done by Satheesh kumar.S,Sirajudhin,Muhamed ibrahim.S','_blank')">Contact Us</a>`;
 //------------------------------------nav bar ----------------------------------
 
 //--------------url SHow--------------
@@ -93,17 +93,20 @@ function urlshow(id, qrContentInput) {
     id
   ).innerHTML = `<a href='${qrContentInput}' target='_blank' style='color:red;'>Click here to Follow link...</a>`;
 }
+
 //-------------confirmation--------------------
-function confirmation(id) {
-  if (confirm("Opening Gmail or Email")) {
-    id.href =
-      "mailto:mohammadibbu008@gmail.com?subject=QR_code generator!&body=This project is done by Satheesh kumar.S,Sirajudhin,Muhamed ibrahim.S";
+function confirmation(id, cnfmess, href, target) {
+  if (confirm(cnfmess)) {
+    id.href = href;
+    id.target = target;
+
     navigator.vibrate([50, 100, 50]);
     setTimeout(() => {
       id.href = "#";
     }, 2000);
   } else {
     id.href = "#";
+    id.target = "_self";
     navigator.vibrate([100]);
   }
 }
