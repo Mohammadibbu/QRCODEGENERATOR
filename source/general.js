@@ -65,7 +65,7 @@ document.getElementById("footer").innerHTML = `
       </div>
     </div>`;
 //--------footer-------------------
-
+//nav bar------------------------------------------------------------
 document.getElementById("headerpage").innerHTML = `   <img
 src="../images/icon.png"
 alt="qr"
@@ -85,7 +85,7 @@ style="
 <a href="https://en.wikipedia.org/wiki/QR_code" target="_blank">About</a>
 
 <a onclick="confirmation(this)">Contact Us</a>`;
-//----------------------------------------------------
+//------------------------------------nav bar ----------------------------------
 
 //--------------url SHow--------------
 function urlshow(id, qrContentInput) {
@@ -93,11 +93,11 @@ function urlshow(id, qrContentInput) {
     id
   ).innerHTML = `<a href='${qrContentInput}' target='_blank' style='color:red;'>Click here to Follow link...</a>`;
 }
-//confirmation----------------------
+//-------------confirmation--------------------
 function confirmation(id) {
   if (confirm("Opening Gmail or Email")) {
     id.href =
-      "mailto:mohammadibbu008@gmail.com?subject=QR_code generator!&body=This project is done by Satheesh kumar.s,Sirajudhin,Muhamed ibrahim.S";
+      "mailto:mohammadibbu008@gmail.com?subject=QR_code generator!&body=This project is done by Satheesh kumar.S,Sirajudhin,Muhamed ibrahim.S";
     navigator.vibrate([50, 100, 50]);
     setTimeout(() => {
       id.href = "#";
@@ -107,4 +107,4 @@ function confirmation(id) {
     navigator.vibrate([100]);
   }
 }
-//---------------------------------------------------
+//--------------------------------------------------
