@@ -17,7 +17,7 @@ document.getElementById("footer").innerHTML = `
       <div class="col-xs-6 col-md-3">
         <h6>Quick Links</h6>
         <ul class="footer-links">
-          <li><a href="https://en.wikipedia.org/wiki/QR_code">About Us</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/QR_code" target="_blank">About</a></li>
           <li>
             <a
               href="mailto:mohammadibbu008@gmail.com?subject=QR_code generator!&body=This project is done by Satheesh kumar.s,Sirajudhin,Muhamed ibrahim.S"
@@ -65,9 +65,46 @@ document.getElementById("footer").innerHTML = `
       </div>
     </div>`;
 //--------footer-------------------
+
+document.getElementById("headerpage").innerHTML = `   <img
+src="../images/icon.png"
+alt="qr"
+width="20"
+height="20"
+style="display: flex; flex-direction: flex-start"
+/><label
+style="
+  color: darkblue;
+  font-weight: bolder;
+  border-radius: 50px;
+  padding-inline: 30px;
+"
+>QR CODE GENERATOR</label
+>
+<a href="../index.html">HOME</a>
+<a href="https://en.wikipedia.org/wiki/QR_code" target="_blank">About</a>
+
+<a onclick="confirmation(this)">Contact Us</a>`;
+//----------------------------------------------------
+
 //--------------url SHow--------------
 function urlshow(id, qrContentInput) {
   document.getElementById(
     id
   ).innerHTML = `<a href='${qrContentInput}' target='_blank' style='color:red;'>Click here to Follow link...</a>`;
 }
+//confirmation----------------------
+function confirmation(id) {
+  if (confirm("Opening Gmail or Email")) {
+    id.href =
+      "mailto:mohammadibbu008@gmail.com?subject=QR_code generator!&body=This project is done by Satheesh kumar.s,Sirajudhin,Muhamed ibrahim.S";
+    navigator.vibrate([50, 100, 50]);
+    setTimeout(() => {
+      id.href = "#";
+    }, 2000);
+  } else {
+    id.href = "#";
+    navigator.vibrate([100]);
+  }
+}
+//---------------------------------------------------
