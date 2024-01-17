@@ -67,7 +67,7 @@ document.getElementById("footer").innerHTML = `
 //--------footer-------------------
 //nav bar------------------------------------------------------------
 document.getElementById("headerpage").innerHTML = `   <img
-src="../images/icon.png"
+src="./images/icon.png"
 alt="qr"
 width="35"
 height="35"
