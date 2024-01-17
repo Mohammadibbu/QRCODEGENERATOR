@@ -81,7 +81,7 @@ style="
 "
 >QR CODE GENERATOR</label
 >
-<a href="../index.html">HOME</a>
+<a href="./index.html">HOME</a>
 <a onclick="confirmation(this,'Open with New Tab..','https://en.wikipedia.org/wiki/QR_code','_blank');" >About</a>
 
 <a onclick="confirmation(this,'Opening Gmail or Email','mailto:mohammadibbu008@gmail.com?subject=QR_code generator!&body=This project is done by Satheesh kumar.S,Sirajudhin,Muhamed ibrahim.S','_blank')">Contact Us</a>`;
